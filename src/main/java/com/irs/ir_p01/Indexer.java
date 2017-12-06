@@ -40,7 +40,7 @@ public class Indexer
         writer.close();
     }
 
-    public void createIndex(Path file) throws IOException
+    public int createIndex(Path file) throws IOException
     {
 
         Files.walkFileTree(file, new SimpleFileVisitor<Path>()
@@ -69,6 +69,8 @@ public class Indexer
                 return FileVisitResult.CONTINUE;
             }
         });
+        
+        return writer.numDocs();
 
     }
 
