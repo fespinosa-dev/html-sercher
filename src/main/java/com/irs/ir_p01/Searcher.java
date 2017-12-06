@@ -13,6 +13,7 @@ import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
+import org.apache.lucene.search.similarities.Similarity;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 
@@ -36,6 +37,13 @@ public class Searcher
 
         indexSearcher = new IndexSearcher(reader);
         queryParser = new QueryParser("body", new EnglishAnalyzer());
+    }
+
+    public Searcher(Path indexDirectoryPath, Similarity similarity) throws IOException
+    {
+        this(indexDirectoryPath);
+        indexSearcher.setSimilarity(similarity);
+
     }
 
     public TopDocs search(String searchQuery)
