@@ -1,6 +1,6 @@
 # html-sercher
-A command-line based Information Retrieval system using Apache Lucene version 7.1.0 and Java that parses and indexes HTML documents that a given folder and its
-subfolders contain. List all parsed files. Lucene is an open source search library that provides standard functionality for analyzing, indexing, and searching text-based documents.
+A command-line based Information Retrieval system using Apache Lucene version 7.1.0 and Java that parses and indexes HTML documents in a given folder and its
+subfolders listing all parsed files. Lucene is an open source search library that provides standard functionality for analyzing, indexing, and searching text-based documents.
 
 
 ## How to install
