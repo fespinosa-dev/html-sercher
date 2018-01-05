@@ -24,6 +24,8 @@ mv IR_P01-1.0-SNAPSHOT-jar-with-dependencies.jar htmlsearcher.jar
 
 ## How to use
 
+You can choose wich space model use for scoring. 
+
 **VZ**: Vector Space Model
 
 **OK**: Okapi BM25
